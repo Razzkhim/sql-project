@@ -32,9 +32,7 @@ func getTestParcel() Parcel {
 func TestAddGetDelete(t *testing.T) {
 	// prepare
 	db, err := sql.Open("sqlite", "tracker.db")
-	if err != nil {
-		require.NoError(t, err)
-	}
+	require.NoError(t, err)
 
 	defer db.Close()
 
@@ -70,9 +68,7 @@ func TestAddGetDelete(t *testing.T) {
 func TestSetAddress(t *testing.T) {
 	// prepare
 	db, err := sql.Open("sqlite", "tracker.db") // настройте подключение к БД
-	if err != nil {
-		require.NoError(t, err)
-	}
+	require.NoError(t, err)
 
 	defer db.Close()
 
@@ -105,9 +101,7 @@ func TestSetAddress(t *testing.T) {
 func TestSetStatus(t *testing.T) {
 	// prepare
 	db, err := sql.Open("sqlite", "tracker.db") // настройте подключение к БД
-	if err != nil {
-		require.NoError(t, err)
-	}
+	require.NoError(t, err)
 
 	defer db.Close()
 
@@ -138,9 +132,7 @@ func TestSetStatus(t *testing.T) {
 func TestGetByClient(t *testing.T) {
 	// prepare
 	db, err := sql.Open("sqlite", "tracker.db") // настройте подключение к БД
-	if err != nil {
-		require.NoError(t, err)
-	}
+	require.NoError(t, err)
 
 	defer db.Close()
 
